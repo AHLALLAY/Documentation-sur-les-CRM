@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctionnalités Avancées CRM - Version Moderne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Barre de navigation -->
+    <nav class="bg-white/10 backdrop-blur-sm sticky top-0 z-50 mb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="home.html" class="text-white font-bold text-xl">CRM Guide</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-white hover:text-yellow-300 transition-colors">Accueil</a>
+                    <a href="fonctionnalites.html" class="text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
+                    <a href="cas-utilisation.html" class="text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
+                    <a href="integration.html" class="text-white hover:text-yellow-300 transition-colors">Intégration</a>
+                    <a href="securite.html" class="text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="home.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Accueil</a>
+                    <a href="fonctionnalites.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
+                    <a href="cas-utilisation.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
+                    <a href="integration.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Intégration</a>
+                    <a href="securite.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="mb-16 text-center">
+            <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-12 mb-8">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4">Fonctionnalités Avancées</h1>
+                <p class="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                    Découvrez les <span class="text-yellow-300 font-semibold">fonctionnalités innovantes</span> qui transforment votre CRM en un outil de pointe
+                </p>
+            </div>
+        </header>
+
+        <!-- Section 1: Intelligence Artificielle -->
+        <section class="mb-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-2xl">🤖</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                        Intelligence Artificielle
+                    </h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#FF6B6B] mb-4">Prédiction Comportementale</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Analyse prédictive des besoins clients</strong>
+                                    <p class="text-sm text-gray-600">Utilisation de l'apprentissage automatique pour anticiper les besoins futurs des clients basés sur leur historique d'interactions.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Détection des signaux de désengagement</strong>
+                                    <p class="text-sm text-gray-600">Identification proactive des comportements indiquant un risque de perte de client.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Recommandations personnalisées</strong>
+                                    <p class="text-sm text-gray-600">Suggestions de produits et services adaptées au profil et aux besoins spécifiques de chaque client.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Scoring de propension à l'achat</strong>
+                                    <p class="text-sm text-gray-600">Évaluation de la probabilité qu'un client effectue un achat dans un délai donné.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#4ECDC4] mb-4">Automatisation Intelligente</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Routage automatique des leads</strong>
+                                    <p class="text-sm text-gray-600">Distribution intelligente des prospects aux commerciaux les plus appropriés selon leur expertise et performance.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Réponses automatiques contextuelles</strong>
+                                    <p class="text-sm text-gray-600">Génération de réponses personnalisées basées sur le contexte et l'historique des interactions.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Planification optimisée des tâches</strong>
+                                    <p class="text-sm text-gray-600">Organisation intelligente des activités en fonction des priorités et des disponibilités.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Analyse de sentiment en temps réel</strong>
+                                    <p class="text-sm text-gray-600">Évaluation instantanée de la satisfaction client à partir des communications.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Analytics Avancés -->
+        <section class="mb-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-2xl">📊</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                        Analytics Avancés
+                    </h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#FF6B6B] mb-4">Tableaux de Bord</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>KPIs en temps réel</strong>
+                                    <p class="text-sm text-gray-600">Suivi instantané des indicateurs clés de performance avec mises à jour automatiques.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Visualisations interactives</strong>
+                                    <p class="text-sm text-gray-600">Graphiques et tableaux dynamiques permettant une analyse approfondie des données.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Rapports personnalisables</strong>
+                                    <p class="text-sm text-gray-600">Création de tableaux de bord sur mesure selon les besoins spécifiques.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#4ECDC4] mb-4">Analyse Prédictive</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Prévisions de ventes</strong>
+                                    <p class="text-sm text-gray-600">Projections précises des revenus futurs basées sur les tendances historiques.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Analyse de tendances</strong>
+                                    <p class="text-sm text-gray-600">Identification des patterns et évolutions du marché pour anticiper les changements.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Détection d'anomalies</strong>
+                                    <p class="text-sm text-gray-600">Repérage automatique des comportements inhabituels nécessitant une attention particulière.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#FF6B6B] mb-4">Reporting Avancé</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Rapports automatisés</strong>
+                                    <p class="text-sm text-gray-600">Génération et distribution automatique de rapports périodiques aux parties prenantes.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Export multi-formats</strong>
+                                    <p class="text-sm text-gray-600">Exportation des données dans différents formats (PDF, Excel, CSV) pour une utilisation flexible.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Alertes personnalisées</strong>
+                                    <p class="text-sm text-gray-600">Notifications automatiques basées sur des seuils et conditions définis.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Gestion du menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fermer le menu mobile lors du redimensionnement de la fenêtre
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // 768px est la breakpoint md de Tailwind
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html> 

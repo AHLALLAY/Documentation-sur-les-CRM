@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intégration CRM - Version Moderne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        body {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Barre de navigation -->
+    <nav class="bg-white/10 backdrop-blur-sm sticky top-0 z-50 mb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="home.html" class="text-white font-bold text-xl">CRM Guide</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-white hover:text-yellow-300 transition-colors">Accueil</a>
+                    <a href="fonctionnalites.html" class="text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
+                    <a href="cas-utilisation.html" class="text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
+                    <a href="integration.html" class="text-white hover:text-yellow-300 transition-colors">Intégration</a>
+                    <a href="securite.html" class="text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="home.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Accueil</a>
+                    <a href="fonctionnalites.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
+                    <a href="cas-utilisation.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
+                    <a href="integration.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Intégration</a>
+                    <a href="securite.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="mb-16 text-center">
+            <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-12 mb-8">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4">Intégration</h1>
+                <p class="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                    Connectez votre CRM avec vos <span class="text-yellow-300 font-semibold">outils existants</span> pour une expérience unifiée
+                </p>
+            </div>
+        </header>
+
+        <!-- Section 1: Intégrations Principales -->
+        <section class="mb-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-2xl">🔄</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                        Intégrations Principales
+                    </h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#FF6B6B] mb-4">Communication</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Microsoft Teams</strong>
+                                    <p class="text-sm text-gray-600">Intégration native pour la collaboration en temps réel et le partage d'informations clients.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Slack</strong>
+                                    <p class="text-sm text-gray-600">Notifications et alertes en temps réel pour une communication d'équipe efficace.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Zoom</strong>
+                                    <p class="text-sm text-gray-600">Planification et suivi des réunions clients directement depuis le CRM.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Email (SMTP/IMAP)</strong>
+                                    <p class="text-sm text-gray-600">Synchronisation bidirectionnelle des emails pour un suivi complet des communications.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#4ECDC4] mb-4">Productivité</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Microsoft 365</strong>
+                                    <p class="text-sm text-gray-600">Intégration complète avec les outils Office pour une productivité maximale.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Google Workspace</strong>
+                                    <p class="text-sm text-gray-600">Synchronisation avec les applications Google pour une collaboration fluide.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Trello</strong>
+                                    <p class="text-sm text-gray-600">Gestion visuelle des projets et suivi des tâches liées aux clients.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Asana</strong>
+                                    <p class="text-sm text-gray-600">Planification et suivi des projets avec intégration des données clients.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: API et Développement -->
+        <section class="mb-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-2xl">⚙️</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                        API et Développement
+                    </h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#FF6B6B] mb-4">REST API</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Endpoints RESTful</strong>
+                                    <p class="text-sm text-gray-600">API complète pour l'intégration avec vos systèmes existants.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Documentation Swagger</strong>
+                                    <p class="text-sm text-gray-600">Documentation interactive pour une intégration rapide et efficace.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Authentification OAuth2</strong>
+                                    <p class="text-sm text-gray-600">Sécurité renforcée pour l'accès aux données sensibles.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#4ECDC4] mb-4">Webhooks</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Événements en temps réel</strong>
+                                    <p class="text-sm text-gray-600">Notifications instantanées pour les mises à jour importantes.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Notifications personnalisées</strong>
+                                    <p class="text-sm text-gray-600">Configuration des alertes selon vos besoins spécifiques.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <div>
+                                    <strong>Retry automatique</strong>
+                                    <p class="text-sm text-gray-600">Gestion robuste des échecs de livraison des notifications.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-[#FF6B6B] mb-4">Intégrations Personnalisées</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>SDK disponibles</strong>
+                                    <p class="text-sm text-gray-600">Kits de développement pour les langages principaux.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Exemples de code</strong>
+                                    <p class="text-sm text-gray-600">Tutoriels et cas d'utilisation pour faciliter l'intégration.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <div>
+                                    <strong>Support développeur</strong>
+                                    <p class="text-sm text-gray-600">Assistance technique dédiée pour les intégrations complexes.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Gestion du menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fermer le menu mobile lors du redimensionnement de la fenêtre
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // 768px est la breakpoint md de Tailwind
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html> 
