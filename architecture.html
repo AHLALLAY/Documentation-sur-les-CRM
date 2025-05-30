@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture CRM - Version Moderne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        techBlue: '#2962FF',
+                        techPurple: '#AA00FF',
+                        techGreen: '#00C853',
+                        techOrange: '#FF6D00',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #2962FF 0%, #AA00FF 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Barre de navigation -->
+    <nav class="bg-white/10 backdrop-blur-sm sticky top-0 z-50 mb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="home.html" class="text-white font-bold text-xl">CRM Guide</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-white hover:text-yellow-300 transition-colors">Accueil</a>
+                    <a href="fonctionnalites.html" class="text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
+                    <a href="cas-utilisation.html" class="text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
+                    <a href="integration.html" class="text-white hover:text-yellow-300 transition-colors">Intégration</a>
+                    <a href="securite.html" class="text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                    <a href="architecture.html" class="text-white hover:text-yellow-300 transition-colors">Architecture</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="home.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Accueil</a>
+                    <a href="fonctionnalites.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
+                    <a href="cas-utilisation.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
+                    <a href="integration.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Intégration</a>
+                    <a href="securite.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                    <a href="architecture.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Architecture</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="mb-16 text-center">
+            <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-12 mb-8">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4">Architecture CRM</h1>
+                <p class="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                    Découvrez l'<span class="text-yellow-300 font-semibold">architecture type</span> d'un projet CRM moderne et évolutif
+                </p>
+            </div>
+        </header>
+
+        <!-- Schéma d'architecture -->
+        <section class="mb-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 text-center">
+                <h2 class="text-3xl font-bold text-techBlue mb-6">Schéma d'Architecture Standard</h2>
+                <img src="schema-architecture-crm.png" alt="Schéma Architecture CRM" class="mx-auto rounded-xl shadow-lg mb-6">
+                <p class="text-gray-600 text-sm">*Le schéma illustre un CRM basé sur des microservices, avec API Gateway, bases de données, moteur de workflow, analytics, et sécurité intégrée.*</p>
+            </div>
+        </section>
+
+        <!-- Détails techniques -->
+        <section class="mb-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-techPurple mb-6">Composants Clés</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-techBlue mb-4">Backend</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span><div><strong>API Gateway (Kong/Traefik)</strong><p class="text-sm text-gray-600">Gestion centralisée des accès et des règles de sécurité.</p></div></li>
+                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span><div><strong>Microservices (Node.js/Spring Boot)</strong><p class="text-sm text-gray-600">Services découplés pour la gestion des utilisateurs, des leads, des opportunités.</p></div></li>
+                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span><div><strong>Communication Asynchrone</strong><p class="text-sm text-gray-600">Kafka pour l'event sourcing et la résilience des échanges.</p></div></li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-techGreen mb-4">Data & Sécurité</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span><div><strong>Base de Données</strong><p class="text-sm text-gray-600">PostgreSQL (relationnel) + MongoDB (NoSQL) pour flexibilité et scalabilité.</p></div></li>
+                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span><div><strong>Analytics</strong><p class="text-sm text-gray-600">Druid, Elasticsearch pour la recherche et les analyses avancées.</p></div></li>
+                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span><div><strong>Sécurité</strong><p class="text-sm text-gray-600">Authentification OAuth2/JWT, chiffrement AES-256, RBAC, conformité RGPD/ISO 27001.</p></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        window.addEventListener('resize', () => { if (window.innerWidth >= 768) { mobileMenu.classList.add('hidden'); } });
+    </script>
+</body>
+</html>

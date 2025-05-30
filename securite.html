@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sécurité CRM - Version Moderne</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        techBlue: '#2962FF',
+                        techPurple: '#AA00FF',
+                        techGreen: '#00C853',
+                        techOrange: '#FF6D00',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
-            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            background: linear-gradient(135deg, #2962FF 0%, #AA00FF 100%);
             min-height: 100vh;
         }
     </style>
@@ -59,41 +73,41 @@
         <section class="mb-16">
             <div class="bg-white rounded-3xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-techBlue to-techPurple rounded-xl flex items-center justify-center mr-4">
                         <span class="text-white text-2xl">🔒</span>
                     </div>
-                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                    <h2 class="text-3xl font-bold text-techBlue">
                         Mesures de Sécurité
                     </h2>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">Protection des Données</h3>
+                        <h3 class="font-bold text-techBlue mb-4">Protection des Données</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Chiffrement AES-256</strong>
                                     <p class="text-sm text-gray-600">Chiffrement de bout en bout pour toutes les données sensibles, en transit et au repos.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Sauvegardes automatiques</strong>
                                     <p class="text-sm text-gray-600">Sauvegardes quotidiennes avec rétention configurable et restauration rapide.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Réplication multi-régions</strong>
                                     <p class="text-sm text-gray-600">Copies de données distribuées géographiquement pour une haute disponibilité.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Détection des intrusions</strong>
                                     <p class="text-sm text-gray-600">Système de surveillance continue pour identifier et bloquer les tentatives d'accès non autorisées.</p>
@@ -101,33 +115,33 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#4ECDC4] mb-4">Contrôle d'Accès</h3>
+                        <h3 class="font-bold text-techPurple mb-4">Contrôle d'Accès</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Authentification 2FA</strong>
                                     <p class="text-sm text-gray-600">Double authentification obligatoire pour tous les accès sensibles.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Gestion des rôles</strong>
                                     <p class="text-sm text-gray-600">Contrôle granulaire des permissions basé sur les rôles et responsabilités.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Journalisation des accès</strong>
                                     <p class="text-sm text-gray-600">Traçabilité complète de toutes les actions et modifications dans le système.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Sessions sécurisées</strong>
                                     <p class="text-sm text-gray-600">Gestion automatique des sessions avec déconnexion après inactivité.</p>
@@ -143,34 +157,34 @@
         <section class="mb-16">
             <div class="bg-white rounded-3xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-techBlue to-techPurple rounded-xl flex items-center justify-center mr-4">
                         <span class="text-white text-2xl">📋</span>
                     </div>
-                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                    <h2 class="text-3xl font-bold text-techBlue">
                         Conformité
                     </h2>
                 </div>
-                
+
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">RGPD</h3>
+                        <h3 class="font-bold text-techBlue mb-4">RGPD</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Protection des données</strong>
                                     <p class="text-sm text-gray-600">Mise en œuvre des mesures techniques et organisationnelles requises.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Droits des utilisateurs</strong>
                                     <p class="text-sm text-gray-600">Outils pour exercer les droits d'accès, de rectification et d'effacement.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Registre des traitements</strong>
                                     <p class="text-sm text-gray-600">Documentation complète des traitements de données personnelles.</p>
@@ -178,26 +192,26 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#4ECDC4] mb-4">ISO 27001</h3>
+                        <h3 class="font-bold text-techPurple mb-4">ISO 27001</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Gestion des risques</strong>
                                     <p class="text-sm text-gray-600">Évaluation et traitement systématique des risques de sécurité.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Contrôles de sécurité</strong>
                                     <p class="text-sm text-gray-600">Mise en œuvre des contrôles recommandés par la norme.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Audit continu</strong>
                                     <p class="text-sm text-gray-600">Surveillance et amélioration continue du système de management.</p>
@@ -205,26 +219,26 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">SOC 2</h3>
+                        <h3 class="font-bold text-techBlue mb-4">SOC 2</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Disponibilité</strong>
                                     <p class="text-sm text-gray-600">Garantie de l'accès aux services selon les SLA définis.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Confidentialité</strong>
                                     <p class="text-sm text-gray-600">Protection des informations sensibles contre tout accès non autorisé.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Intégrité</strong>
                                     <p class="text-sm text-gray-600">Maintien de l'exactitude et de la cohérence des données.</p>
@@ -238,7 +252,6 @@
     </div>
 
     <script>
-        // Gestion du menu mobile
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -246,12 +259,11 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Fermer le menu mobile lors du redimensionnement de la fenêtre
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) { // 768px est la breakpoint md de Tailwind
+            if (window.innerWidth >= 768) {
                 mobileMenu.classList.add('hidden');
             }
         });
     </script>
 </body>
-</html> 
+</html>

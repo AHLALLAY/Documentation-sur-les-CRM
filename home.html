@@ -5,9 +5,23 @@
     <meta charset="UTF-8">
     <title>CRM Guide - Accueil</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        techBlue: '#2962FF',
+                        techPurple: '#AA00FF',
+                        techGreen: '#00C853',
+                        techOrange: '#FF6D00',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
-            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            background: linear-gradient(135deg, #2962FF 0%, #AA00FF 100%);
             min-height: 100vh;
         }
     </style>
@@ -24,6 +38,7 @@
                     <a href="cas-utilisation.html" class="text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
                     <a href="integration.html" class="text-white hover:text-yellow-300 transition-colors">Intégration</a>
                     <a href="securite.html" class="text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                    <a href="architecture.html" class="text-white hover:text-yellow-300 transition-colors">Architecture</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,6 +54,7 @@
                     <a href="cas-utilisation.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
                     <a href="integration.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Intégration</a>
                     <a href="securite.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                    <a href="architecture.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Architecture</a>
                 </div>
             </div>
         </div>
@@ -59,60 +75,60 @@
         <section class="mb-16">
             <div class="bg-white rounded-3xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-techBlue to-techPurple rounded-xl flex items-center justify-center mr-4">
                         <span class="text-white text-2xl">💡</span>
                     </div>
-                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                    <h2 class="text-3xl font-bold text-techBlue">
                         Qu'est-ce que le CRM ?
                     </h2>
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">Définition</h3>
+                        <h3 class="font-bold text-techBlue mb-4">Définition Technique</h3>
                         <p class="text-gray-600 mb-4">
-                            Le CRM (Customer Relationship Management) est une stratégie globale qui permet aux entreprises de gérer et d'optimiser leurs relations avec les clients tout au long du cycle de vie.
+                            Le CRM (Customer Relationship Management) est un système intégré combinant bases de données relationnelles (PostgreSQL, MongoDB), moteurs d'analyse (Apache Spark) et interfaces utilisateur (React/Angular) pour optimiser le cycle de vie client.
                         </p>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
-                                    <strong>Centralisation des données</strong>
-                                    <p class="text-sm text-gray-600">Regroupement de toutes les informations clients dans une base unique et accessible.</p>
+                                    <strong>Modèle de données</strong>
+                                    <p class="text-sm text-gray-600">Schéma relationnel normalisé (3NF) avec entités principales : Contact, Compte, Opportunité, Interaction.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
-                                    <strong>Suivi des interactions</strong>
-                                    <p class="text-sm text-gray-600">Historique complet des échanges et des actions menées avec chaque client.</p>
+                                    <strong>Architecture</strong>
+                                    <p class="text-sm text-gray-600">Microservices containerisés (Docker) orchestrés par Kubernetes avec API Gateway (Kong).</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#4ECDC4] mb-4">Objectifs</h3>
+                        <h3 class="font-bold text-techPurple mb-4">Composants Techniques</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
-                                    <strong>Amélioration de la satisfaction client</strong>
-                                    <p class="text-sm text-gray-600">Personnalisation des services et réponses rapides aux besoins.</p>
+                                    <strong>Backend</strong>
+                                    <p class="text-sm text-gray-600">Node.js/NestJS ou Java/Spring Boot avec authentification JWT/OAuth2.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
-                                    <strong>Optimisation des ventes</strong>
-                                    <p class="text-sm text-gray-600">Identification des opportunités et suivi efficace des prospects.</p>
+                                    <strong>Frontend</strong>
+                                    <p class="text-sm text-gray-600">SPA avec React 18+, state management (Redux Toolkit), et charting (D3.js).</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
-                                    <strong>Fidélisation des clients</strong>
-                                    <p class="text-sm text-gray-600">Renforcement des relations et développement de la loyauté.</p>
+                                    <strong>Data Pipeline</strong>
+                                    <p class="text-sm text-gray-600">ETL avec Apache Airflow pour l'intégration des données clients.</p>
                                 </div>
                             </li>
                         </ul>
@@ -125,70 +141,70 @@
         <section class="mb-16">
             <div class="bg-white rounded-3xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-techBlue to-techPurple rounded-xl flex items-center justify-center mr-4">
                         <span class="text-white text-2xl">✨</span>
                     </div>
-                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                    <h2 class="text-3xl font-bold text-techBlue">
                         Fonctionnalités Clés
                     </h2>
                 </div>
                 
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">Gestion des Contacts</h3>
+                        <h3 class="font-bold text-techBlue mb-4">Gestion des Contacts</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
-                                    <strong>Base de données clients</strong>
-                                    <p class="text-sm text-gray-600">Stockage et organisation des informations clients.</p>
+                                    <strong>Modèle de données</strong>
+                                    <p class="text-sm text-gray-600">Schéma JSON Schema/OpenAPI pour validation des entrées.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
-                                    <strong>Historique des interactions</strong>
-                                    <p class="text-sm text-gray-600">Suivi complet des échanges avec chaque client.</p>
+                                    <strong>API REST/GraphQL</strong>
+                                    <p class="text-sm text-gray-600">Endpoints CRUD avec pagination et filtres avancés.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#4ECDC4] mb-4">Automatisation</h3>
+                        <h3 class="font-bold text-techPurple mb-4">Automatisation</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
-                                    <strong>Tâches automatisées</strong>
-                                    <p class="text-sm text-gray-600">Automatisation des processus répétitifs.</p>
+                                    <strong>Workflow Engine</strong>
+                                    <p class="text-sm text-gray-600">Camunda BPMN pour l'orchestration des processus.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
-                                    <strong>Workflows personnalisés</strong>
-                                    <p class="text-sm text-gray-600">Création de processus métier sur mesure.</p>
+                                    <strong>Event Sourcing</strong>
+                                    <p class="text-sm text-gray-600">Apache Kafka pour le tracking des changements.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">Analytics</h3>
+                        <h3 class="font-bold text-techGreen mb-4">Analytics</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techGreen mr-2">•</span>
                                 <div>
-                                    <strong>Tableaux de bord</strong>
-                                    <p class="text-sm text-gray-600">Visualisation des KPIs en temps réel.</p>
+                                    <strong>OLAP Cube</strong>
+                                    <p class="text-sm text-gray-600">Apache Druid pour l'analyse multidimensionnelle.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techGreen mr-2">•</span>
                                 <div>
-                                    <strong>Rapports personnalisés</strong>
-                                    <p class="text-sm text-gray-600">Analyse détaillée des performances.</p>
+                                    <strong>Machine Learning</strong>
+                                    <p class="text-sm text-gray-600">Scikit-learn/TensorFlow pour la prédiction des ventes.</p>
                                 </div>
                             </li>
                         </ul>
@@ -201,64 +217,50 @@
         <section class="mb-16">
             <div class="bg-white rounded-3xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-techBlue to-techPurple rounded-xl flex items-center justify-center mr-4">
                         <span class="text-white text-2xl">📈</span>
                     </div>
-                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
-                        Avantages
+                    <h2 class="text-3xl font-bold text-techBlue">
+                        Avantages Techniques
                     </h2>
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">Bénéfices Business</h3>
+                        <h3 class="font-bold text-techBlue mb-4">Performance</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
-                                    <strong>Augmentation des ventes</strong>
-                                    <p class="text-sm text-gray-600">Amélioration du taux de conversion et de la valeur client.</p>
+                                    <strong>Cache Redis</strong>
+                                    <p class="text-sm text-gray-600">Réduction des temps de réponse à <100ms pour les requêtes fréquentes.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
-                                    <strong>Réduction des coûts</strong>
-                                    <p class="text-sm text-gray-600">Optimisation des processus et des ressources.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
-                                <div>
-                                    <strong>Meilleure prise de décision</strong>
-                                    <p class="text-sm text-gray-600">Données précises pour des décisions éclairées.</p>
+                                    <strong>Indexation Elasticsearch</strong>
+                                    <p class="text-sm text-gray-600">Recherche full-text en temps réel sur 10M+ documents.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#4ECDC4] mb-4">Avantages Opérationnels</h3>
+                        <h3 class="font-bold text-techPurple mb-4">Évolutivité</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
-                                    <strong>Efficacité accrue</strong>
-                                    <p class="text-sm text-gray-600">Automatisation des tâches répétitives.</p>
+                                    <strong>Kubernetes</strong>
+                                    <p class="text-sm text-gray-600">Auto-scaling horizontal basé sur les métriques Prometheus.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
-                                    <strong>Collaboration améliorée</strong>
-                                    <p class="text-sm text-gray-600">Partage d'informations entre les équipes.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
-                                <div>
-                                    <strong>Scalabilité</strong>
-                                    <p class="text-sm text-gray-600">Adaptation à la croissance de l'entreprise.</p>
+                                    <strong>Sharding PostgreSQL</strong>
+                                    <p class="text-sm text-gray-600">Distribution des données pour supporter la croissance.</p>
                                 </div>
                             </li>
                         </ul>

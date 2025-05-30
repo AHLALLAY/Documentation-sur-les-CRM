@@ -9,6 +9,12 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    colors: {
+                        techBlue: '#2962FF',
+                        techPurple: '#AA00FF',
+                        techGreen: '#00C853',
+                        techOrange: '#FF6D00',
+                    },
                     animation: {
                         'fade-in': 'fadeIn 0.6s ease-in-out',
                         'slide-up': 'slideUp 0.8s ease-out',
@@ -34,7 +40,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .gradient-text {
-            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            background: linear-gradient(135deg, #2962FF 0%, #AA00FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -44,7 +50,7 @@
             transition: transform 0.3s ease;
         }
         body {
-            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            background: linear-gradient(135deg, #2962FF 0%, #AA00FF 100%);
             min-height: 100vh;
         }
     </style>
@@ -96,41 +102,41 @@
         <section class="mb-16">
             <div class="bg-white rounded-3xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-techBlue to-techPurple rounded-xl flex items-center justify-center mr-4">
                         <span class="text-white text-2xl">🏢</span>
                     </div>
-                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                    <h2 class="text-3xl font-bold text-techBlue">
                         Secteurs d'Activité
                     </h2>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">E-commerce</h3>
+                        <h3 class="font-bold text-techBlue mb-4">E-commerce</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Personnalisation des parcours clients</strong>
                                     <p class="text-sm text-gray-600">Adaptation dynamique de l'expérience utilisateur en fonction du comportement et des préférences de chaque client.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Gestion des abandons de panier</strong>
                                     <p class="text-sm text-gray-600">Système automatisé de relance et d'analyse des raisons d'abandon pour optimiser les conversions.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Recommandations produits en temps réel</strong>
                                     <p class="text-sm text-gray-600">Suggestions personnalisées basées sur l'historique d'achat et le comportement de navigation.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Analyse du comportement d'achat</strong>
                                     <p class="text-sm text-gray-600">Suivi détaillé des parcours clients pour identifier les points d'amélioration et optimiser les ventes.</p>
@@ -138,33 +144,33 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#4ECDC4] mb-4">Services Financiers</h3>
+                        <h3 class="font-bold text-techPurple mb-4">Services Financiers</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Gestion des portefeuilles clients</strong>
                                     <p class="text-sm text-gray-600">Suivi complet des relations clients et des opportunités de développement commercial.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Détection des opportunités de cross-selling</strong>
                                     <p class="text-sm text-gray-600">Identification intelligente des produits complémentaires adaptés au profil client.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Conformité et suivi réglementaire</strong>
                                     <p class="text-sm text-gray-600">Automatisation des processus de conformité et documentation des interactions clients.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Analyse des risques clients</strong>
                                     <p class="text-sm text-gray-600">Évaluation continue du profil de risque et des opportunités de développement.</p>
@@ -180,34 +186,34 @@
         <section class="mb-16">
             <div class="bg-white rounded-3xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-xl flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-techBlue to-techPurple rounded-xl flex items-center justify-center mr-4">
                         <span class="text-white text-2xl">🎯</span>
                     </div>
-                    <h2 class="text-3xl font-bold text-[#FF6B6B]">
+                    <h2 class="text-3xl font-bold text-techBlue">
                         Scénarios d'Utilisation
                     </h2>
                 </div>
-                
+
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">Ventes</h3>
+                        <h3 class="font-bold text-techBlue mb-4">Ventes</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Qualification des leads</strong>
                                     <p class="text-sm text-gray-600">Processus automatisé d'évaluation et de scoring des prospects pour optimiser le suivi commercial.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Suivi des opportunités</strong>
                                     <p class="text-sm text-gray-600">Gestion complète du pipeline commercial avec indicateurs de progression et alertes.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Prévisions de ventes</strong>
                                     <p class="text-sm text-gray-600">Analyse prédictive des revenus futurs basée sur les données historiques et les tendances.</p>
@@ -215,26 +221,26 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#4ECDC4] mb-4">Marketing</h3>
+                        <h3 class="font-bold text-techPurple mb-4">Marketing</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Campagnes personnalisées</strong>
                                     <p class="text-sm text-gray-600">Création et automatisation de campagnes marketing ciblées selon le profil client.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Analyse des performances</strong>
                                     <p class="text-sm text-gray-600">Suivi détaillé des KPIs marketing et optimisation continue des stratégies.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#4ECDC4] mr-2">•</span>
+                                <span class="text-techPurple mr-2">•</span>
                                 <div>
                                     <strong>Segmentation avancée</strong>
                                     <p class="text-sm text-gray-600">Création de segments clients dynamiques pour des actions marketing ciblées.</p>
@@ -242,26 +248,26 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-2xl">
-                        <h3 class="font-bold text-[#FF6B6B] mb-4">Service Client</h3>
+                        <h3 class="font-bold text-techBlue mb-4">Service Client</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Gestion des tickets</strong>
                                     <p class="text-sm text-gray-600">Système intégré de suivi et résolution des demandes clients avec SLA.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Support multicanale</strong>
                                     <p class="text-sm text-gray-600">Gestion unifiée des interactions clients sur tous les canaux de communication.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-[#FF6B6B] mr-2">•</span>
+                                <span class="text-techBlue mr-2">•</span>
                                 <div>
                                     <strong>Satisfaction client</strong>
                                     <p class="text-sm text-gray-600">Mesure et analyse continue de la satisfaction client pour amélioration continue.</p>
@@ -275,7 +281,6 @@
     </div>
 
     <script>
-        // Gestion du menu mobile
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -283,12 +288,11 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Fermer le menu mobile lors du redimensionnement de la fenêtre
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) { // 768px est la breakpoint md de Tailwind
+            if (window.innerWidth >= 768) {
                 mobileMenu.classList.add('hidden');
             }
         });
     </script>
 </body>
-</html> 
+</html>
