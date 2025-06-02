@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +27,7 @@
         }
     </style>
 </head>
+
 <body class="font-sans text-gray-800">
     <!-- Barre de navigation -->
     <nav class="bg-white/10 backdrop-blur-sm sticky top-0 z-50 mb-8">
@@ -34,26 +36,37 @@
                 <a href="home.html" class="text-white font-bold text-xl">CRM Guide</a>
                 <div class="hidden md:flex space-x-8">
                     <a href="home.html" class="text-white hover:text-yellow-300 transition-colors">Accueil</a>
-                    <a href="fonctionnalites.html" class="text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
-                    <a href="cas-utilisation.html" class="text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
-                    <a href="integration.html" class="text-white hover:text-yellow-300 transition-colors">Intégration</a>
+                    <a href="fonctionnalites.html"
+                        class="text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
+                    <a href="cas-utilisation.html" class="text-white hover:text-yellow-300 transition-colors">Cas
+                        d'utilisation</a>
+                    <a href="integration.html"
+                        class="text-white hover:text-yellow-300 transition-colors">Intégration</a>
                     <a href="securite.html" class="text-white hover:text-yellow-300 transition-colors">Sécurité</a>
-                    <a href="architecture.html" class="text-white hover:text-yellow-300 transition-colors">Architecture</a>
+                    <a href="architecture.html"
+                        class="text-white hover:text-yellow-300 transition-colors">Architecture</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="home.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Accueil</a>
-                    <a href="fonctionnalites.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
-                    <a href="cas-utilisation.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
-                    <a href="integration.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Intégration</a>
-                    <a href="securite.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Sécurité</a>
-                    <a href="architecture.html" class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Architecture</a>
+                    <a href="home.html"
+                        class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Accueil</a>
+                    <a href="fonctionnalites.html"
+                        class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Fonctionnalités</a>
+                    <a href="cas-utilisation.html"
+                        class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Cas d'utilisation</a>
+                    <a href="integration.html"
+                        class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Intégration</a>
+                    <a href="securite.html"
+                        class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Sécurité</a>
+                    <a href="architecture.html"
+                        class="block px-3 py-2 text-white hover:text-yellow-300 transition-colors">Architecture</a>
                 </div>
             </div>
         </div>
@@ -65,7 +78,8 @@
             <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-12 mb-8">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4">Architecture CRM</h1>
                 <p class="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-                    Découvrez l'<span class="text-yellow-300 font-semibold">architecture type</span> d'un projet CRM moderne et évolutif
+                    Découvrez l'<span class="text-yellow-300 font-semibold">architecture type</span> d'un projet CRM
+                    moderne et évolutif
                 </p>
             </div>
         </header>
@@ -74,8 +88,256 @@
         <section class="mb-16">
             <div class="bg-white rounded-3xl shadow-xl p-8 text-center">
                 <h2 class="text-3xl font-bold text-techBlue mb-6">Schéma d'Architecture Standard</h2>
-                <img src="schema-architecture-crm.png" alt="Schéma Architecture CRM" class="mx-auto rounded-xl shadow-lg mb-6">
-                <p class="text-gray-600 text-sm">*Le schéma illustre un CRM basé sur des microservices, avec API Gateway, bases de données, moteur de workflow, analytics, et sécurité intégrée.*</p>
+                <!-- <img src="schema-architecture-crm.png" alt="Schéma Architecture CRM" class="mx-auto rounded-xl shadow-lg mb-6"> -->
+                <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="apiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="serviceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="dataGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="securityGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#c2410c;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Background -->
+                    <rect width="1200" height="800" fill="#f8fafc" />
+
+                    <!-- Title -->
+                    <rect x="0" y="0" width="1200" height="60" fill="url(#headerGrad)" />
+                    <text x="600" y="35" text-anchor="middle" fill="white" font-size="24"
+                        font-weight="bold">Architecture CRM - Microservices</text>
+
+                    <!-- Client Layer -->
+                    <rect x="50" y="80" width="1100" height="80" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"
+                        rx="8" />
+                    <text x="600" y="110" text-anchor="middle" font-size="16" font-weight="bold">Couche Client</text>
+                    <rect x="200" y="125" width="120" height="25" fill="#3b82f6" rx="4" />
+                    <text x="260" y="142" text-anchor="middle" fill="white" font-size="12">Web App</text>
+                    <rect x="340" y="125" width="120" height="25" fill="#3b82f6" rx="4" />
+                    <text x="400" y="142" text-anchor="middle" fill="white" font-size="12">Mobile App</text>
+                    <rect x="480" y="125" width="120" height="25" fill="#3b82f6" rx="4" />
+                    <text x="540" y="142" text-anchor="middle" fill="white" font-size="12">API Clients</text>
+                    <rect x="620" y="125" width="120" height="25" fill="#3b82f6" rx="4" />
+                    <text x="680" y="142" text-anchor="middle" fill="white" font-size="12">Dashboard</text>
+
+                    <!-- Security Layer -->
+                    <rect x="50" y="180" width="1100" height="50" fill="url(#securityGrad)" rx="8" />
+                    <text x="600" y="200" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Couche
+                        Sécurité</text>
+                    <text x="200" y="218" text-anchor="middle" fill="white" font-size="11">OAuth 2.0</text>
+                    <text x="350" y="218" text-anchor="middle" fill="white" font-size="11">JWT</text>
+                    <text x="500" y="218" text-anchor="middle" fill="white" font-size="11">Rate Limiting</text>
+                    <text x="650" y="218" text-anchor="middle" fill="white" font-size="11">WAF</text>
+                    <text x="800" y="218" text-anchor="middle" fill="white" font-size="11">SSL/TLS</text>
+                    <text x="950" y="218" text-anchor="middle" fill="white" font-size="11">RBAC</text>
+
+                    <!-- API Gateway -->
+                    <rect x="450" y="250" width="300" height="60" fill="url(#apiGrad)" rx="8" />
+                    <text x="600" y="270" text-anchor="middle" fill="white" font-size="16" font-weight="bold">API
+                        Gateway</text>
+                    <text x="600" y="290" text-anchor="middle" fill="white" font-size="12">Routage • Load Balancing •
+                        Monitoring</text>
+                    <text x="600" y="305" text-anchor="middle" fill="white" font-size="12">Cache • Circuit
+                        Breaker</text>
+
+                    <!-- Microservices Layer -->
+                    <rect x="50" y="330" width="1100" height="200" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"
+                        rx="8" />
+                    <text x="600" y="350" text-anchor="middle" font-size="16" font-weight="bold">Microservices
+                        CRM</text>
+
+                    <!-- Service boxes -->
+                    <rect x="80" y="370" width="130" height="70" fill="url(#serviceGrad)" rx="6" />
+                    <text x="145" y="390" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Service</text>
+                    <text x="145" y="405" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Clients</text>
+                    <text x="145" y="420" text-anchor="middle" fill="white" font-size="10">CRUD • Recherche</text>
+                    <text x="145" y="432" text-anchor="middle" fill="white" font-size="10">Segmentation</text>
+
+                    <rect x="230" y="370" width="130" height="70" fill="url(#serviceGrad)" rx="6" />
+                    <text x="295" y="390" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Service</text>
+                    <text x="295" y="405" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Contacts</text>
+                    <text x="295" y="420" text-anchor="middle" fill="white" font-size="10">Gestion contacts</text>
+                    <text x="295" y="432" text-anchor="middle" fill="white" font-size="10">Historique</text>
+
+                    <rect x="380" y="370" width="130" height="70" fill="url(#serviceGrad)" rx="6" />
+                    <text x="445" y="390" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Service</text>
+                    <text x="445" y="405" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Ventes</text>
+                    <text x="445" y="420" text-anchor="middle" fill="white" font-size="10">Pipeline</text>
+                    <text x="445" y="432" text-anchor="middle" fill="white" font-size="10">Opportunités</text>
+
+                    <rect x="530" y="370" width="130" height="70" fill="url(#serviceGrad)" rx="6" />
+                    <text x="595" y="390" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Service</text>
+                    <text x="595" y="405" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Marketing</text>
+                    <text x="595" y="420" text-anchor="middle" fill="white" font-size="10">Campagnes</text>
+                    <text x="595" y="432" text-anchor="middle" fill="white" font-size="10">Email • SMS</text>
+
+                    <rect x="680" y="370" width="130" height="70" fill="url(#serviceGrad)" rx="6" />
+                    <text x="745" y="390" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Service</text>
+                    <text x="745" y="405" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Support</text>
+                    <text x="745" y="420" text-anchor="middle" fill="white" font-size="10">Tickets</text>
+                    <text x="745" y="432" text-anchor="middle" fill="white" font-size="10">Chat • FAQ</text>
+
+                    <rect x="830" y="370" width="130" height="70" fill="url(#serviceGrad)" rx="6" />
+                    <text x="895" y="390" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Service</text>
+                    <text x="895" y="405" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Notifications</text>
+                    <text x="895" y="420" text-anchor="middle" fill="white" font-size="10">Email • Push</text>
+                    <text x="895" y="432" text-anchor="middle" fill="white" font-size="10">Alertes</text>
+
+                    <rect x="980" y="370" width="130" height="70" fill="url(#serviceGrad)" rx="6" />
+                    <text x="1045" y="390" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Service</text>
+                    <text x="1045" y="405" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Reporting</text>
+                    <text x="1045" y="420" text-anchor="middle" fill="white" font-size="10">Rapports</text>
+                    <text x="1045" y="432" text-anchor="middle" fill="white" font-size="10">KPI • Metrics</text>
+
+                    <!-- Analytics & Workflow -->
+                    <rect x="80" y="460" width="200" height="60" fill="#06b6d4" rx="6" />
+                    <text x="180" y="480" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Moteur
+                        Analytics</text>
+                    <text x="180" y="495" text-anchor="middle" fill="white" font-size="11">Machine Learning</text>
+                    <text x="180" y="508" text-anchor="middle" fill="white" font-size="11">Prédictions • BI</text>
+
+                    <rect x="300" y="460" width="200" height="60" fill="#8b5cf6" rx="6" />
+                    <text x="400" y="480" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Moteur
+                        Workflow</text>
+                    <text x="400" y="495" text-anchor="middle" fill="white" font-size="11">Automatisation</text>
+                    <text x="400" y="508" text-anchor="middle" fill="white" font-size="11">Rules Engine</text>
+
+                    <rect x="520" y="460" width="200" height="60" fill="#f59e0b" rx="6" />
+                    <text x="620" y="480" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Message
+                        Queue</text>
+                    <text x="620" y="495" text-anchor="middle" fill="white" font-size="11">Apache Kafka</text>
+                    <text x="620" y="508" text-anchor="middle" fill="white" font-size="11">Event Streaming</text>
+
+                    <rect x="740" y="460" width="200" height="60" fill="#10b981" rx="6" />
+                    <text x="840" y="480" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Cache
+                        Redis</text>
+                    <text x="840" y="495" text-anchor="middle" fill="white" font-size="11">Sessions • Data</text>
+                    <text x="840" y="508" text-anchor="middle" fill="white" font-size="11">Performance</text>
+
+                    <rect x="960" y="460" width="150" height="60" fill="#6366f1" rx="6" />
+                    <text x="1035" y="480" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Config
+                        Server</text>
+                    <text x="1035" y="495" text-anchor="middle" fill="white" font-size="11">Consul</text>
+                    <text x="1035" y="508" text-anchor="middle" fill="white" font-size="11">Service Discovery</text>
+
+                    <!-- Data Layer -->
+                    <rect x="50" y="550" width="1100" height="120" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"
+                        rx="8" />
+                    <text x="600" y="575" text-anchor="middle" font-size="16" font-weight="bold">Couche Données</text>
+
+                    <rect x="100" y="590" width="150" height="60" fill="url(#dataGrad)" rx="6" />
+                    <text x="175" y="610" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">PostgreSQL</text>
+                    <text x="175" y="625" text-anchor="middle" fill="white" font-size="10">Données relationnelles</text>
+                    <text x="175" y="638" text-anchor="middle" fill="white" font-size="10">Clients • Ventes</text>
+
+                    <rect x="270" y="590" width="150" height="60" fill="url(#dataGrad)" rx="6" />
+                    <text x="345" y="610" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">MongoDB</text>
+                    <text x="345" y="625" text-anchor="middle" fill="white" font-size="10">Documents</text>
+                    <text x="345" y="638" text-anchor="middle" fill="white" font-size="10">Logs • Sessions</text>
+
+                    <rect x="440" y="590" width="150" height="60" fill="url(#dataGrad)" rx="6" />
+                    <text x="515" y="610" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Elasticsearch</text>
+                    <text x="515" y="625" text-anchor="middle" fill="white" font-size="10">Recherche</text>
+                    <text x="515" y="638" text-anchor="middle" fill="white" font-size="10">Indexation</text>
+
+                    <rect x="610" y="590" width="150" height="60" fill="url(#dataGrad)" rx="6" />
+                    <text x="685" y="610" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">InfluxDB</text>
+                    <text x="685" y="625" text-anchor="middle" fill="white" font-size="10">Time Series</text>
+                    <text x="685" y="638" text-anchor="middle" fill="white" font-size="10">Métriques</text>
+
+                    <rect x="780" y="590" width="150" height="60" fill="url(#dataGrad)" rx="6" />
+                    <text x="855" y="610" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Data
+                        Lake</text>
+                    <text x="855" y="625" text-anchor="middle" fill="white" font-size="10">Big Data</text>
+                    <text x="855" y="638" text-anchor="middle" fill="white" font-size="10">Analytics</text>
+
+                    <rect x="950" y="590" width="150" height="60" fill="url(#dataGrad)" rx="6" />
+                    <text x="1025" y="610" text-anchor="middle" fill="white" font-size="12"
+                        font-weight="bold">Backup</text>
+                    <text x="1025" y="625" text-anchor="middle" fill="white" font-size="10">Sauvegarde</text>
+                    <text x="1025" y="638" text-anchor="middle" fill="white" font-size="10">Disaster Recovery</text>
+
+                    <!-- Infrastructure -->
+                    <rect x="50" y="690" width="1100" height="50" fill="#1f2937" rx="8" />
+                    <text x="600" y="710" text-anchor="middle" fill="white" font-size="14"
+                        font-weight="bold">Infrastructure</text>
+                    <text x="200" y="728" text-anchor="middle" fill="white" font-size="11">Docker</text>
+                    <text x="350" y="728" text-anchor="middle" fill="white" font-size="11">Kubernetes</text>
+                    <text x="500" y="728" text-anchor="middle" fill="white" font-size="11">CI/CD</text>
+                    <text x="650" y="728" text-anchor="middle" fill="white" font-size="11">Monitoring</text>
+                    <text x="800" y="728" text-anchor="middle" fill="white" font-size="11">Logging</text>
+                    <text x="950" y="728" text-anchor="middle" fill="white" font-size="11">Observability</text>
+
+                    <!-- Connection arrows -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+                        </marker>
+                    </defs>
+
+                    <!-- Client to Security -->
+                    <line x1="600" y1="160" x2="600" y2="180" stroke="#64748b" stroke-width="2"
+                        marker-end="url(#arrowhead)" />
+
+                    <!-- Security to API Gateway -->
+                    <line x1="600" y1="230" x2="600" y2="250" stroke="#64748b" stroke-width="2"
+                        marker-end="url(#arrowhead)" />
+
+                    <!-- API Gateway to Services -->
+                    <line x1="600" y1="310" x2="600" y2="330" stroke="#64748b" stroke-width="2"
+                        marker-end="url(#arrowhead)" />
+
+                    <!-- Services to Data -->
+                    <line x1="600" y1="530" x2="600" y2="550" stroke="#64748b" stroke-width="2"
+                        marker-end="url(#arrowhead)" />
+
+                    <!-- Data to Infrastructure -->
+                    <line x1="600" y1="670" x2="600" y2="690" stroke="#64748b" stroke-width="2"
+                        marker-end="url(#arrowhead)" />
+
+                    <!-- Horizontal connections between services -->
+                    <line x1="210" y1="405" x2="230" y2="405" stroke="#94a3b8" stroke-width="1" />
+                    <line x1="360" y1="405" x2="380" y2="405" stroke="#94a3b8" stroke-width="1" />
+                    <line x1="510" y1="405" x2="530" y2="405" stroke="#94a3b8" stroke-width="1" />
+                    <line x1="660" y1="405" x2="680" y2="405" stroke="#94a3b8" stroke-width="1" />
+                    <line x1="810" y1="405" x2="830" y2="405" stroke="#94a3b8" stroke-width="1" />
+                    <line x1="960" y1="405" x2="980" y2="405" stroke="#94a3b8" stroke-width="1" />
+
+                </svg>
+                <p class="text-gray-600 text-sm">*Le schéma illustre un CRM basé sur des microservices, avec API
+                    Gateway, bases de données, moteur de workflow, analytics, et sécurité intégrée.*</p>
             </div>
         </section>
 
@@ -87,17 +349,47 @@
                     <div class="bg-gray-50 p-6 rounded-2xl">
                         <h3 class="font-bold text-techBlue mb-4">Backend</h3>
                         <ul class="space-y-3">
-                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span><div><strong>API Gateway (Kong/Traefik)</strong><p class="text-sm text-gray-600">Gestion centralisée des accès et des règles de sécurité.</p></div></li>
-                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span><div><strong>Microservices (Node.js/Spring Boot)</strong><p class="text-sm text-gray-600">Services découplés pour la gestion des utilisateurs, des leads, des opportunités.</p></div></li>
-                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span><div><strong>Communication Asynchrone</strong><p class="text-sm text-gray-600">Kafka pour l'event sourcing et la résilience des échanges.</p></div></li>
+                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span>
+                                <div><strong>API Gateway (Kong/Traefik)</strong>
+                                    <p class="text-sm text-gray-600">Gestion centralisée des accès et des règles de
+                                        sécurité.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span>
+                                <div><strong>Microservices (Node.js/Spring Boot)</strong>
+                                    <p class="text-sm text-gray-600">Services découplés pour la gestion des
+                                        utilisateurs, des leads, des opportunités.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start"><span class="text-techBlue mr-2">•</span>
+                                <div><strong>Communication Asynchrone</strong>
+                                    <p class="text-sm text-gray-600">Kafka pour l'event sourcing et la résilience des
+                                        échanges.</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-2xl">
                         <h3 class="font-bold text-techGreen mb-4">Data & Sécurité</h3>
                         <ul class="space-y-3">
-                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span><div><strong>Base de Données</strong><p class="text-sm text-gray-600">PostgreSQL (relationnel) + MongoDB (NoSQL) pour flexibilité et scalabilité.</p></div></li>
-                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span><div><strong>Analytics</strong><p class="text-sm text-gray-600">Druid, Elasticsearch pour la recherche et les analyses avancées.</p></div></li>
-                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span><div><strong>Sécurité</strong><p class="text-sm text-gray-600">Authentification OAuth2/JWT, chiffrement AES-256, RBAC, conformité RGPD/ISO 27001.</p></div></li>
+                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span>
+                                <div><strong>Base de Données</strong>
+                                    <p class="text-sm text-gray-600">PostgreSQL (relationnel) + MongoDB (NoSQL) pour
+                                        flexibilité et scalabilité.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span>
+                                <div><strong>Analytics</strong>
+                                    <p class="text-sm text-gray-600">Druid, Elasticsearch pour la recherche et les
+                                        analyses avancées.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start"><span class="text-techGreen mr-2">•</span>
+                                <div><strong>Sécurité</strong>
+                                    <p class="text-sm text-gray-600">Authentification OAuth2/JWT, chiffrement AES-256,
+                                        RBAC, conformité RGPD/ISO 27001.</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -112,4 +404,5 @@
         window.addEventListener('resize', () => { if (window.innerWidth >= 768) { mobileMenu.classList.add('hidden'); } });
     </script>
 </body>
+
 </html>
